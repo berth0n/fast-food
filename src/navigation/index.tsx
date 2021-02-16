@@ -3,6 +3,7 @@ import { Best } from '../common/Best';
 import { DetailScreen } from '../presentation/screen/DetailScreen';
 import { HomeScreen } from '../presentation/screen/HomeScreen';
 import { LoginScreen } from '../presentation/screen/LoginScreen';
+import { SmartPhoneScreen } from '../presentation/screen/SmartPhoneScreen';
 
 const AppNavigator = createSwitchNavigator({
   Login: {
@@ -17,9 +18,12 @@ const AppNavigator = createSwitchNavigator({
   Best: {
     screen: Best,
   },
+  SmartPhone: {
+    screen: SmartPhoneScreen,
+  },
 },
 {
-    initialRouteName: 'Home',
+    initialRouteName: 'Login',
     defaultNavigationOptions:{headerShown:true,  headerTransparent: true}
 }
 

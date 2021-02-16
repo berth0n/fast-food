@@ -5,7 +5,7 @@ import {
   StatusBar,
   Text,
   TouchableOpacity,
-  View
+  View,
 } from 'react-native';
 import Styles from './styles';
 export const LoginScreen = (props: any) => {
@@ -25,7 +25,6 @@ export const LoginScreen = (props: any) => {
       <View style={{padding: 20, height: '50%'}}>
         <View style={Styles.button}>
           <TouchableOpacity
-           
             onPress={() => {
               alert(
                 "My name is RAOILISON Manitra Berthon, I'm Telecom and Software Engeener",
@@ -37,17 +36,18 @@ export const LoginScreen = (props: any) => {
 
         <View style={Styles.boxContainer}>
           <View style={Styles.wrapBox}>
-            <View style={Styles.boxElement}>
-              <TouchableOpacity
-              onPress={()=>props.navigation.navigate("Home")}>
-              <Text style={{fontFamily:'AquareNormal'}}>Profil</Text>
-              </TouchableOpacity>
-            </View>
+            <TouchableOpacity
+              style={Styles.boxElement}
+              onPress={() => props.navigation.navigate('Home')}>
+              <Text style={{fontFamily: 'AquareNormal'}}>Fast Food</Text>
+            </TouchableOpacity>
           </View>
           <View style={Styles.wrapBox}>
-            <View style={Styles.boxElement}>
-              <Text style={{fontFamily:'AquareNormal'}}>Experiences</Text>
-            </View>
+            <TouchableOpacity
+              style={Styles.boxElement}
+              onPress={() => props.navigation.navigate('SmartPhone')}>
+              <Text style={{fontFamily: 'AquareNormal'}}>smart phone</Text>
+            </TouchableOpacity>
           </View>
           <View style={Styles.wrapBox}>
             <View style={Styles.boxElement}>
@@ -56,10 +56,9 @@ export const LoginScreen = (props: any) => {
           </View>
           <View style={Styles.wrapBox}>
             <View style={Styles.boxElement}>
-              <TouchableOpacity onPress={()=>console.log("project")}>
+              <TouchableOpacity onPress={() => console.log('project')}>
                 <Text>Projects</Text>
               </TouchableOpacity>
- 
             </View>
           </View>
         </View>

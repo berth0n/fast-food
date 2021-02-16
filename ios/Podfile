@@ -8,6 +8,8 @@ target 'FastFood' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+  pod 'react-native-ussd', :path => '../node_modules/react-native-ussd'
+
   target 'FastFoodTests' do
     inherit! :complete
     # Pods for testing
